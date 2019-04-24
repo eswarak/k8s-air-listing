@@ -6,7 +6,7 @@ metadata:
 readinessProbe:
   path: /healthz
   port: 7000
-  initialDelaySeconds: 10
+  initialDelaySeconds: 15
   timeoutSeconds: 2
   periodSeconds: 10
 
@@ -18,7 +18,7 @@ livenessProbe:
   periodSeconds: 10
 image:
   name: listingsvc
-  imageName: "mycluster.icp:8500/default/listing-mongo-microservice:0.0.1" 
+  imageName: "mycluster.icp:8500/default/listing:0.0.1" 
   imagePullPolicy: Always
   ports:
     containerPort: 7000
